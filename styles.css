@@ -2,9 +2,15 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #222;
+  position: fixed;
   color: #000000;
   margin: 0;
   padding: 0;
+  background-image: url('coded.jpg');
+  background-size: cover; 
+  background-attachment: fixed; 
+  height: 100vh;
+  width: 100vw; 
 }
 
 .container {
@@ -37,10 +43,30 @@ button {
   border: none;
   color: #fff;
   cursor: pointer;
+  transition: transform 0.02s ease; /* Add a smooth transition effect */
 }
 
 button:hover {
   background-color: #0056b3;
+  animation: vibrate 0.02s ease infinite; /* Apply the vibration animation on hover */
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
+  100% {
+    transform: translateX(2px);
+  }
 }
 
 ul {
@@ -69,8 +95,9 @@ li.completed {
   padding: 0;
 }
 
-.delete-btn:hover{
+.delete-btn:hover {
   background-color: rgb(135, 206, 250);
+  animation: vibrate 0.02s ease infinite; /* Apply the vibration animation on hover */
 }
 
 .checkbox {
@@ -135,14 +162,4 @@ li.completed {
     margin: 50px auto;
     padding: 20px;
   }
-}
-
-/* Additional background styles */
-body {
-  background-image: url('coded.jpg');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh; /* Set the height of the body to 100% of the viewport height */
-  width: 100vw;
 }
