@@ -1,0 +1,148 @@
+/* Common styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #222;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: hwb(203 52% 2%);
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: hsl(0, 0%, 0%);
+}
+
+.delete-btn {
+  background-color: rgb(135, 206, 250);
+  color: hsl(0, 100%, 50%);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: auto; 
+  padding: 0;
+}
+
+.delete-btn:hover{
+  background-color: rgb(135, 206, 250);
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+/* Responsive styles */
+/* Adjustments for laptops and desktops */
+@media (min-width: 992px) {
+  .container {
+    max-width: 800px;
+    margin: 100px auto;
+    padding: 30px;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+
+  input[type="text"] {
+    font-size: 18px;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
+  li {
+    font-size: 18px;
+  }
+}
+
+/* Adjustments for iPhones and similar-sized devices */
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 10px;
+  }
+  
+  h1 {
+    font-size: 24px;
+  }
+
+  input[type="text"] {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  li {
+    font-size: 14px;
+  }
+}
+
+/* Adjustments for tablets */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+  }
+}
+
+/* Additional background styles */
+body {
+  background-image: url('coded.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Set the height of the body to 100% of the viewport height */
+  width: 100vw;
+}
