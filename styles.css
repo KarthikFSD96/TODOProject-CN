@@ -1,19 +1,22 @@
-/* Common styles */
+/* Global page styling */
 body {
+  /* Background, font, and layout styles */
   font-family: Arial, sans-serif;
   background-color: #222;
   position: fixed;
-  color: #000000;
+  color: #000;
   margin: 0;
   padding: 0;
   background-image: url('coded.jpg');
-  background-size: cover; 
-  background-attachment: fixed; 
+  background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
-  width: 100vw; 
+  width: 100vw;
 }
 
+/* Container for content */
 .container {
+  /* Layout and styling for the main content area */
   max-width: 600px;
   margin: 50px auto;
   padding: 20px;
@@ -21,142 +24,157 @@ body {
   border-radius: 5px;
 }
 
+/* Page heading */
 h1 {
+  /* Center-align the heading */
   text-align: center;
 }
 
+/* Form styling */
 .form {
+  /* Display and margin for the form elements */
   display: flex;
   margin-bottom: 20px;
 }
 
+/* Text input field */
 input[type="text"] {
+  /* Styling for the text input */
   flex: 1;
   padding: 10px;
   font-size: 16px;
 }
 
+/* "Add Task" button */
 button {
+  /* Styling for the button */
   padding: 10px 20px;
   font-size: 16px;
   background-color: #007bff;
   border: none;
   color: #fff;
   cursor: pointer;
-  transition: transform 0.02s ease; /* Add a smooth transition effect */
+  transition: transform 0.02s ease;
 }
 
+/* Button hover animation */
 button:hover {
+  /* Animation on button hover */
   background-color: #0056b3;
-  animation: vibrate 0.02s ease infinite; /* Apply the vibration animation on hover */
+  animation: vibrate 0.02s ease infinite;
 }
 
-@keyframes vibrate {
-  0% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-2px);
-  }
-  50% {
-    transform: translateX(2px);
-  }
-  75% {
-    transform: translateX(-2px);
-  }
-  100% {
-    transform: translateX(2px);
-  }
-}
-
+/* Unordered list styling */
 ul {
+  /* Styling for lists */
   list-style-type: none;
   padding: 0;
 }
 
+/* List item styling */
 li {
+  /* Styling for list items */
   margin-bottom: 10px;
   display: flex;
   align-items: center;
 }
 
+/* Completed tasks with strikethrough */
 li.completed {
+  /* Styling for completed tasks */
   text-decoration: line-through;
-  color: hsl(0, 0%, 0%);
+  color: black;
 }
 
+/* Delete button styling */
 .delete-btn {
+  /* Styling for delete buttons */
   background-color: rgb(135, 206, 250);
   color: hsl(0, 100%, 50%);
   border: none;
   cursor: pointer;
   font-size: 16px;
-  margin-left: auto; 
+  margin-left: auto;
   padding: 0;
 }
 
+/* Delete button hover animation */
 .delete-btn:hover {
+  /* Hover effect for delete buttons */
   background-color: rgb(135, 206, 250);
-  animation: vibrate 0.02s ease infinite; /* Apply the vibration animation on hover */
+  animation: vibrate 0.02s ease infinite;
 }
 
+/* Checkbox styling */
 .checkbox {
+  /* Styling for checkboxes */
   margin-right: 10px;
 }
 
-/* Responsive styles */
+/* Responsive styles for different screen sizes */
 /* Adjustments for laptops and desktops */
 @media (min-width: 992px) {
+  /* Styling for larger screens */
   .container {
     max-width: 800px;
     margin: 100px auto;
     padding: 30px;
   }
-  
+
   h1 {
+    /* Increase heading font size */
     font-size: 32px;
   }
 
   input[type="text"] {
+    /* Increase input font size */
     font-size: 18px;
   }
 
   button {
+    /* Increase button font size */
     font-size: 18px;
   }
 
   li {
+    /* Increase list item font size */
     font-size: 18px;
   }
 }
 
 /* Adjustments for iPhones and similar-sized devices */
 @media (max-width: 576px) {
+  /* Styling for smaller screens */
   .container {
     max-width: 90%;
     margin: 20px auto;
     padding: 10px;
   }
-  
+
   h1 {
+    /* Reduce heading font size */
     font-size: 24px;
   }
 
   input[type="text"] {
+    /* Reduce input font size */
     font-size: 14px;
   }
 
   button {
+    /* Reduce button font size */
     font-size: 14px;
   }
 
   li {
+    /* Reduce list item font size */
     font-size: 14px;
   }
 }
 
 /* Adjustments for tablets */
 @media (min-width: 768px) and (max-width: 991px) {
+  /* Styling for tablet-sized screens */
   .container {
     max-width: 600px;
     margin: 50px auto;
